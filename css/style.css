@@ -239,3 +239,12 @@ body {
   background-color: #fff !important;
   border: 1px solid #0049313f !important;
 }
+.small-menu:hover {
+  color: #004931 !important;
+  background-color: #f4f4f2;
+}
+
+.small-menu-active {
+  color: #004931 !important;
+  background-color: #f4f4f2;
+}
