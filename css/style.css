@@ -164,6 +164,9 @@ body {
 }
 #cta {
   background-color: #c8c6bc0a;
+  margin-top: -7rem;
+  z-index: 99 !important;
+  position: relative;
 }
 #intro {
   background-color: #f4f4f2;
