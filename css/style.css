@@ -115,6 +115,12 @@ body {
   --bs-btn-disabled-bg: #004931;
   --bs-btn-disabled-border-color: #004931;
 }
+.btn-secondary {
+  --bs-btn-bg: #052747;
+  --bs-btn-border-color: #052747;
+  --bs-btn-disabled-bg: #052747;
+  --bs-btn-disabled-border-color: #052747;
+}
 .btn-outline-primary {
   --bs-btn-color: #004931;
   --bs-btn-border-color: #004931;
@@ -138,7 +144,7 @@ body {
   font-size: 0.6rem;
 }
 .p-0 {
-  padding: 0;
+  padding: 0 !important;
 }
 .w-33 {
   max-width: 250px !important;
@@ -250,4 +256,7 @@ body {
 .small-menu-active {
   color: #004931 !important;
   background-color: #f4f4f2;
+}
+.text-blue {
+  color: #052747;
 }
