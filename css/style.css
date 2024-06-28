@@ -260,3 +260,7 @@ body {
 .text-blue {
   color: #052747;
 }
+.small-menu-active-blue {
+  color: #052747 !important;
+  background-color: #f4f4f2;
+}

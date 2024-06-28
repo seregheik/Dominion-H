@@ -16,7 +16,7 @@ body {
 }
 .loader {
   border: 16px solid #f3f3f3;
-  border-top: 16px solid #004931;
+  border-top: 16px solid #052747;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -100,12 +100,6 @@ hr {
   border-radius: 1rem;
 }
 .form-control {
-  display: block;
-  width: 100%;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
   color: #ffffff;
   background-color: #ffffff00;
   background-clip: padding-box;
@@ -113,8 +107,6 @@ hr {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .form-control:focus {
