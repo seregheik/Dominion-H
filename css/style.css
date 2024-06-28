@@ -248,6 +248,11 @@ body {
   background-color: #fff !important;
   border: 1px solid #0049313f !important;
 }
+.btn-secondary:hover {
+  color: #052747;
+  background-color: #fff !important;
+  border: 1px solid #0527473f !important;
+}
 .small-menu:hover {
   color: #004931 !important;
   background-color: #f4f4f2;
@@ -261,6 +266,14 @@ body {
   color: #052747;
 }
 .small-menu-active-blue {
+  color: #052747 !important;
+  background-color: #f4f4f2;
+}
+.small-menu-blue {
+  /* color: #052747 !important; */
+  /* background-color: #f4f4f2; */
+}
+.small-menu-blue:hover {
   color: #052747 !important;
   background-color: #f4f4f2;
 }
