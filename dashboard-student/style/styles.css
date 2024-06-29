@@ -100,17 +100,17 @@ hr {
   border-radius: 1rem;
 }
 .form-control {
-  color: #ffffff;
+  color: inherit;
   background-color: #ffffff00;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid #ced4da65;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
 .form-control:focus {
-  color: #ffffff;
+  color: inherit;
   background-color: #ffffff00;
   border-color: #ffffff57;
   outline: 0;
