@@ -91,6 +91,10 @@ body {
 .blur-10 {
   backdrop-filter: blur(0.1rem);
 }
+
+.blur-20 {
+  backdrop-filter: blur(0.2rem);
+}
 .vh-75 {
   min-height: 75vh;
 }
@@ -282,6 +286,14 @@ body {
   width: 60px;
   height: 60px;
 }
-.copyright{
+.copyright {
   text-align: center;
+}
+.absolute {
+  position: absolute;
+}
+.img-login-bg {
+  background-image: url("/assets/carousel/1.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
