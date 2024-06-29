@@ -297,3 +297,18 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: 0 0 0 0;
+}
+.navbar-toggler {
+  padding: 0;
+  font-size: var(--bs-navbar-toggler-font-size);
+  line-height: 1;
+  color: rgb(23 53 123);
+  background-color: transparent;
+  border: var(--bs-border-width) solid rgb(0 0 0 / 0%);
+  border-radius: var(--bs-navbar-toggler-border-radius);
+  transition: var(--bs-navbar-toggler-transition);
+}
