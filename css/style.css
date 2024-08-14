@@ -12,6 +12,9 @@ body {
 .fw-inherit {
   font-size: inherit;
 }
+.bg-red {
+  background-color: #650018;
+}
 .dropdown-menu {
   --bs-dropdown-zindex: 1000;
   --bs-dropdown-min-width: 10rem;
