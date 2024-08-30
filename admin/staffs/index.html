@@ -62,8 +62,8 @@
                             </a>
                         </div>
                         <div class="d-grid py-1 p-0">
-                            <a class="link-underline rounded-1 small-menu-active-blue small-menu-blue p-2 text-light fs-7 link-underline-opacity-0"
-                                href="./">
+                            <a class="link-underline rounded-1  small-menu-blue p-2 text-light fs-7 link-underline-opacity-0"
+                                href="../students/">
                                 <div class="d-flex gap-2 align-items-center">
                                     Student List
                                 </div>
@@ -71,7 +71,7 @@
                         </div>
                         <div class="d-grid py-1 p-0">
                             <a class="link-underline rounded-1 small-menu-active-blue small-menu-blue p-2 text-light fs-7 link-underline-opacity-0"
-                                href="../staffs/">
+                                href="./">
                                 <div class="d-flex gap-2 align-items-center">
                                     Staff List
                                 </div>
@@ -132,7 +132,7 @@
                             Register Staff
                         </div>
                     </a>
-                    <a class="link-underline rounded-1 small-menu-active-blue small-menu-blue p-2 text-light fs-7 link-underline-opacity-0"
+                    <a class="link-underline rounded-1 small-menu-blue p-2 text-light fs-7 link-underline-opacity-0"
                         href="../students/">
                         <div class="d-flex gap-2 align-items-center">
                             Student List
@@ -169,10 +169,10 @@
                                     d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                             </svg>
                         </div>
-                        <div class="fs-6 fw-bold text-red align-self-center ">Students List</div>
+                        <div class="fs-6 fw-bold text-red align-self-center ">Staff List</div>
                     </div>
                     <div class="my-1 col-12 col-md-4 text-start">
-                        <input type="text" id="myInput" id="middlename" placeholder="Search for names.."
+                        <input type="text" id="myInput" id="middlename" placeholder="Search for names class subjects.."
                             onkeyup="myFunction()" class="form-control form-control-lg" />
                     </div>
                     <table id="myTable" class="table sortable">
@@ -181,24 +181,24 @@
                                 <th scope="col">#</th>
                                 <th scope="col">First</th>
                                 <th scope="col">Last</th>
-                                <th scope="col">Gender</th>
-                                <th scope="col">Class</th>
+                                <th scope="col">Subjects</th>
+                                <th scope="col">Classes</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr onclick="location.href='../student-details'">
+                            <tr onclick="location.href='../staff-details/'">
                                 <th scope="row">1</th>
                                 <td>Mark</td>
                                 <td>Otto</td>
-                                <td>Male</td>
-                                <td>Jss1</td>
+                                <td>Maths</td>
+                                <td>Jss1,Jss2,Jss3</td>
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
                                 <td>Jacob</td>
                                 <td>Queen</td>
-                                <td>Female</td>
-                                <td>Jss2</td>
+                                <td>Elementary Science</td>
+                                <td>Primary 1, Primary 2, Primary 3, Primary 4, Primary 5</td>
                             </tr>
                         </tbody>
                     </table>
@@ -224,13 +224,23 @@
             // Loop through all table rows, and hide those who don't match the search query
             for (i = 0; i < tr.length; i++) {
                 td = tr[i].getElementsByTagName("td")[0];
-                tdl = tr[i].getElementsByTagName("td")[1]
+                tdl = tr[i].getElementsByTagName("td")[1];
+                tdsubject = tr[i].getElementsByTagName("td")[2];
+                tdclasses = tr[i].getElementsByTagName("td")[3];
                 if (td) {
                     txtValue = td.textContent || td.innerText;
                     tdlValue = tdl.textContent || tdl.innerText;
+                    tdsubjectValue = tdsubject.textContent || tdsubject.innerText;
+                    tdclassesValue = tdclasses.textContent || tdclasses.innerText;
                     if (txtValue.toUpperCase().indexOf(filter) > -1) {
                         tr[i].style.display = "";
                     } else if (tdlValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    }
+                    else if (tdclassesValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    }
+                    else if (tdsubjectValue.toUpperCase().indexOf(filter) > -1) {
                         tr[i].style.display = "";
                     }
                     else {
