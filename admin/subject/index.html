@@ -28,6 +28,69 @@
         .loader {
             border-top: 16px solid #650018;
         }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        button {
+            padding: 5px 10px;
+            margin: 2px;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+        input{
+            border: 1px solid #151515;
+        }
+        /* Modal styles */
+        .class-modal {
+            display: none;
+            position: fixed ;
+            z-index: 1 ;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%;
+        }
+        .close {
+            color: #65001879;
+            font-size: 28px;
+            font-weight: bold;
+            width: 0%;
+            background-color: green;
+        }
+        .close:hover,
+        .close:focus {
+            color: #650018;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .hidden{
+            display: none;
+        }
     </style>
 </head>
 
@@ -274,8 +337,113 @@
                                     d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                             </svg>
                         </div>
-                        <div class="fs-6 fw-bold text-red align-self-center ">Dashboard</div>
+                        <div class="fs-6 fw-bold text-red align-self-center ">Subject Dashboard</div>
                     </div>
+
+                    <h1>Subject List</h1>
+
+                    <!-- Create Class Button -->
+                    <button class="btn btn-secondary btn-sm fs-7 mt-4 mb-4" id="create-class">Add Subject</button>
+
+
+                    <!-- Table detail -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Subjects</th>
+                                <th>Class</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="classTableBody">
+                            <tr>
+                                <td>Maths</td>
+                                <td>Jss1</td>
+                                <td>
+                                    <button class="btn btn-secondary btn-sm fs-7" id="view-class">View</button>
+                                    <button class="btn btn-secondary btn-sm fs-7" id="edit-class">Edit</button>
+                                    <button class="btn btn-secondary btn-sm fs-7" id="delete-class">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>English</td>
+                                <td>jss2</td>
+                                <td>
+                                    <button class="btn btn-secondary btn-sm fs-7" id="view-class">View</button>
+                                    <button class="btn btn-secondary btn-sm fs-7" id="edit-class">Edit</button>
+                                    <button class="btn btn-secondary btn-sm fs-7" id="delete-class">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Biology</td>
+                                <td>jss3</td>
+                                <td>
+                                    <button class="btn btn-secondary btn-sm fs-7" id="view-class">View</button>
+                                    <button class="btn btn-secondary btn-sm fs-7" id="edit-class">Edit</button>
+                                    <button class="btn btn-secondary btn-sm fs-7" id="delete-class">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <!-- Add Subjects Modal -->
+                    <div id="createModal" class="class-modal">
+                        <div class="modal-content">
+                            <span class="close" id="closeCreateSubjectModal">&times;</span>
+                            <h2>Add Subject</h2>
+                            <form id="createSubjectForm">
+                                <label for="classDropdown">Class:</label>
+                                <select id="classDropdown" name="classDropdown" onchange="toggleSubjectField()" required>
+                                    <option value="">Select a class</option>
+                                    <option value="Jss1">Jss1</option>
+                                    <option value="Jss2">Jss2</option>
+                                    <option value="Jss3">Jss3</option>
+                                </select><br><br>
+
+                                <div id="subjectField" class="hidden">
+                                    <label for="subjectName">Subject Name:</label>
+                                    <input type="text" id="subjectName" name="subjectName" required><br><br>
+                                </div>
+                                
+                                <button type="button" class="btn btn-secondary btn-sm fs-7" id="addSubject">Add Subject</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- View Subject Modal -->
+                    <div id="viewModal" class="class-modal">
+                        <div class="modal-content">
+                            <span class="close" id="closeViewModal">&times;</span>
+                            <h2>Subject Details</h2>
+                            <p id="viewClassName">Class: </p>
+                            <p id="viewSubjectName">Subject: </p>
+                        </div>
+                    </div>
+
+                    <!-- Edit Class Modal -->
+                    <div id="editModal" class="class-modal">
+                        <div class="modal-content">
+                            <span class="close" id="closeEditModal">&times;</span>
+                            <h2>Edit Subject</h2>
+                            <form id="editClassForm">
+                                <label for="editClassDropdown">Class:</label>
+                                <select id="editClassDropdown" name="editClassDropdown" onchange="toggleEditSubjectField()" required>
+                                    <option value="">Select a class</option>
+                                    <option value="Jss1">Jss1</option>
+                                    <option value="Jss2">Jss2</option>
+                                    <option value="Jss3">Jss3</option>
+                                </select><br><br>
+
+                                <div id="editSubjectField" class="hidden">
+                                    <label for="editSubjectName">Subject Name:</label>
+                                    <input type="text" id="editSubjectName" name="editSubjectName" required><br><br>
+                                </div>
+
+                                <button type="button" class="btn btn-secondary btn-sm fs-7" id="saveSubjectChanges">Save Changes</button>
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
             </section>
         </div>
@@ -287,6 +455,17 @@
             $(".preloader").delay(400).fadeOut("slow");
             $("#overlayer").delay(400).fadeOut("slow");
         });
+
+        function toggleSubjectField() {
+            const classDropdown = document.getElementById('classDropdown');
+            const subjectField = document.getElementById('subjectField');
+            subjectField.style.display = classDropdown.value ? 'block' : 'none';
+        }
+        function toggleEditSubjectField() {
+            const classDropdown = document.getElementById('editClassDropdown');
+            const editSubjectField = document.getElementById('editSubjectField');
+            editSubjectField.style.display = classDropdown.value ? 'block' : 'none';
+        }
     </script>
 </body>
 

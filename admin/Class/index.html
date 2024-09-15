@@ -28,6 +28,65 @@
         .loader {
             border-top: 16px solid #650018;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        button {
+            padding: 5px 10px;
+            margin: 2px;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+        input{
+            border: 1px solid #151515;
+        }
+        /* Modal styles */
+        .class-modal {
+            display: none;
+            position: fixed ;
+            z-index: 1 ;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%;
+        }
+        .close {
+            color: #65001879;
+            font-size: 28px;
+            font-weight: bold;
+            width: 0%;
+            background-color: green;
+        }
+        .close:hover,
+        .close:focus {
+            color: #650018;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -274,8 +333,85 @@
                                     d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                             </svg>
                         </div>
-                        <div class="fs-6 fw-bold text-red align-self-center ">Dashboard</div>
+                        <div class="fs-6 fw-bold text-red align-self-center "> Class Dashboard</div>
                     </div>
+                    <h1>Class List</h1>
+
+                    <!-- Create Class Button -->
+                    <button class="btn btn-secondary btn-sm fs-7 mt-4 mb-4" id="create-class">Create Class</button>
+
+
+                    <!-- Table detail -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="classTableBody">
+                            <tr>
+                                <td>Jss1</td>
+                                <td>
+                                    <button class="btn btn-secondary btn-sm fs-7" id="view-class">View</button>
+                                    <button class="btn btn-secondary btn-sm fs-7" id="edit-class">Edit</button>
+                                    <button class="btn btn-secondary btn-sm fs-7" id="delete-class">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jss2</td>
+                                <td>
+                                    <button class="btn btn-secondary btn-sm fs-7" id="view-class">View</button>
+                                    <button class="btn btn-secondary btn-sm fs-7" id="edit-class">Edit</button>
+                                    <button class="btn btn-secondary btn-sm fs-7" id="delete-class">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jss3</td>
+                                <td>
+                                    <button class="btn btn-secondary btn-sm fs-7" id="view-class">View</button>
+                                    <button class="btn btn-secondary btn-sm fs-7" id="edit-class">Edit</button>
+                                    <button class="btn btn-secondary btn-sm fs-7" id="delete-class">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <!-- Create Class Modal -->
+                    <div id="createModal" class="class-modal">
+                        <div class="modal-content">
+                            <span class="close" id="closeCreateModal">&times;</span>
+                            <h2>Create Class</h2>
+                            <form id="createClassForm">
+                                <label for="className">Class Name:</label>
+                                <input type="text" id="className" name="className" required><br><br>
+                                <button type="button" class="btn btn-secondary btn-sm fs-7" id="addClass">Add Class</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- View Class Modal -->
+                    <div id="viewModal" class="class-modal">
+                        <div class="modal-content">
+                            <span class="close" id="closeViewModal">&times;</span>
+                            <h2>Class Details</h2>
+                            <p id="viewClassName">class:</p>
+                        </div>
+                    </div>
+
+                    <!-- Edit Class Modal -->
+                    <div id="editModal" class="class-modal">
+                        <div class="modal-content">
+                            <span class="close" id="closeEditModal">&times;</span>
+                            <h2>Edit Class</h2>
+                            <form id="editClassForm">
+                                <label for="editClassName">Class Name:</label>
+                                <input type="text" id="editClassName" name="editClassName" required><br><br>
+                                <button type="button" class="btn btn-secondary btn-sm fs-7" id="saveClassChanges()">Save Changes</button>
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
             </section>
         </div>
