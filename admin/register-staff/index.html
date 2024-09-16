@@ -28,6 +28,13 @@
         .loader {
             border-top: 16px solid #650018;
         }
+        select {
+            border: 1px solid #15151558;
+        }
+        option{
+            padding: .2rem;
+            color: #151515c1;
+        }
     </style>
 </head>
 
@@ -374,27 +381,23 @@
                                     <input type="text" id="Nationality" placeholder="Nationality"
                                         class="form-control form-control-sm" required/>
                                 </div>
-                                <!-- Subject to teach  -->
-                                <div class="my-1 col-12 text-start">
-                                    <label for="SubjectsToTeach" class="text-capitalize fs-9 form-label">Subjects To
-                                        Teach</label>
-                                    <input type="text" id="SubjectsToTeach" placeholder="Subjects To Teach"
-                                        class="form-control form-control-sm" />
-                                </div>
                                 <!-- class to teach  -->
-                                <div class="my-1 col-12 col-md-4 text-start">
-                                    <label for="ClasstoTeach" class="text-capitalize fs-9 form-label">Class to
-                                        Teach</label>
-                                    <input type="text" id="ClasstoTeach" placeholder="Class to Teach"
-                                        class="form-control form-control-sm" required/>
+                                <div class="my-1 col-12 col-md-4 text-start d-flex">
+                                    <!-- Dropdown for selecting classes with multiple selection -->
+                                    <label for="class-select" class="px-2">Select Class:</label>
+                                    <select id="class-select" name="class[]" multiple required>
+                                        <option value="JSS1">JSS1</option>
+                                        <option value="SS1">SS1</option>
+                                        <!-- Add more classes as needed -->
+                                    </select>
                                 </div>
-                                <!-- class currently applying for  -->
-                                <div class="my-1 col-12 col-md-4 text-start">
-                                    <label for="ClassCurrentlyApplying For"
-                                        class="text-capitalize fs-9 form-label">Class Currently Applying For</label>
-                                    <input type="text" id="ClassCurrentlyApplyingFor"
-                                        placeholder="Class Currently Applying For" class="form-control form-control-sm"
-                                        required />
+                                <!-- Subject to teach  -->
+                                <div class="my-1 col-12 col-md-4 text-start d-flex">
+                                    <!-- Dropdown for selecting subjects with multiple selection -->
+                                    <label for="subject-select" class="px-2">Select Subject:</label>
+                                    <select id="subject-select" name="subject[]" multiple required>
+                                        <!-- Options will be populated dynamically based on selected classes -->
+                                    </select>
                                 </div>
 
                             </div>
@@ -432,6 +435,46 @@
             $(".preloader").delay(400).fadeOut("slow");
             $("#overlayer").delay(400).fadeOut("slow");
         });
+
+        // Define subject options for each class
+        const subjectsByClass = {
+            'JSS1': [
+                { value: 'Maths', text: 'Maths' },
+                { value: 'English', text: 'English' }
+            ],
+            'SS1': [
+                { value: 'Physics', text: 'Physics' },
+                { value: 'Accounting', text: 'Accounting' }
+            ],
+        };
+
+        const classSelect = document.getElementById('class-select');
+        const subjectSelect = document.getElementById('subject-select');
+
+        classSelect.addEventListener('change', function() {
+            // Clear existing options
+            subjectSelect.innerHTML = '';
+
+            // Get selected classes
+            const selectedClasses = Array.from(classSelect.selectedOptions).map(option => option.value);
+
+            // Collect unique subjects for selected classes
+            const subjects = new Set();
+            selectedClasses.forEach(cls => {
+                if (subjectsByClass[cls]) {
+                    subjectsByClass[cls].forEach(sub => subjects.add(sub));
+                }
+            });
+
+            // Populate the subjects dropdown
+            subjects.forEach(sub => {
+                const option = document.createElement('option');
+                option.value = sub.value;
+                option.text = sub.text;
+                subjectSelect.add(option);
+            });
+        });
+
     </script>
 </body>
 
