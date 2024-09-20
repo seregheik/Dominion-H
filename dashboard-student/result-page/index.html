@@ -14,11 +14,32 @@
                 background-color: #063806;
             }
             .result-content{
-                border: 5px solid #004931;
+                border: 2px solid #063806;
+            }
+            .result-sum{
+                background-color: #063806;
+            }
+            .remark{
+                border-bottom:2px solid #063806;;
             }
             .text-green{
                 color: #063806;
             }
+            .result-table{
+                
+            }
+
+            th{
+                background-color: #063806 !important;
+                color: #ffffff !important;
+                font-weight: lighter;
+                padding: .2rem !important;
+            }
+            td{
+                text-transform: capitalize;
+            }
+              
+
         </style>
     </head>
     <body class=" overflow-x-hidden">
@@ -49,7 +70,7 @@
         <p id="examinationTerm" class="text-capitalize p-2 fs-4">first term examination result</p>
 
         <!-- The result wrapper -->
-        <div class="result-content m-4 ">
+        <div class="result-content m-md-4 m-1   ">
             <!-- The container for the Student result details-->
             <div class="result-student-deatils row m-1">
                 <!-- student Image -->
@@ -57,7 +78,7 @@
                     <img src="./logo.png" alt="student-image" srcset="" class="border border-3 border-dark">
                     
                 </div>
-             <!-- student personal and school deatils -->
+                <!-- student personal and school deatils -->
                 <div class="col-md-3 col-12  d-flex flex-column align-items-start justify-content-center border border-1 mt-md-0 mt-1 ">
                     <p class="   text-capitalize" id="studentName">Name: dominion Havard</p>
                     <p class="   text-capitalize" id="session">session: 2024/2025</p>
@@ -75,6 +96,86 @@
                 </div>
                     
             </div>
+
+            <!-- The table result -->
+            <div class="result-table m-md-3 table-responsive-md">
+                <table class="table table-sm table-bordered text-center">
+                    <thead class="text-capitalize">
+                        <tr class="">
+                            <th class="col text-start">Subjects</th>
+                            <th class="col">Test 1</th>
+                            <th class="col">Test 2</th>
+                            <th class="col">exam</th>
+                            <th class="col">total</th>
+                            <th class="col">grade</th>
+                            <th class="col">remarks</th>
+                        </tr>
+                    </thead>
+                    <tbody class="">
+                        <tr>
+                            <td class="text-start">creative Art</td>
+                            <td>10</td>
+                            <td>15</td>
+                            <td>55</td>
+                            <td>80</td>
+                            <td>A</td>
+                            <td>excellent</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start">Basic Technology</td>
+                            <td>10</td>
+                            <td>15</td>
+                            <td>55</td>
+                            <td>80</td>
+                            <td>A</td>
+                            <td>excellent</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start">English</td>
+                            <td>10</td>
+                            <td>15</td>
+                            <td>55</td>
+                            <td>80</td>
+                            <td>A</td>
+                            <td>excellent</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start">Mathematics</td>
+                            <td>10</td>
+                            <td>15</td>
+                            <td>55</td>
+                            <td>80</td>
+                            <td>A</td>
+                            <td>excellent</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+             
+            <!-- The table sum -->
+            <div class="result-sum d-flex align-items-center justify-content-evenly my-3">
+                <p id="termTotal" class="text-white text-uppercase  pt-2">Term's Total : 320</p>
+                <p id="termAverage" class="text-white text-uppercase pt-2"> Term's average: 85%</p>
+
+            </div>
+
+            <!-- Techers and Principal remark -->
+            <div class="remark d-flex justify-content-between ">
+                <div class="remark-content m-2 ">
+                    <p id="nextTermBegin">Next Term Begins: Mon, 09 Sep 2024</p>
+                    <p id="classTeacherName">Class Teacher's Name: Mr Jerry</p>
+                    <p id="classTecherRemark">Class Teacher's Remark: Active in class and eager to learn.</p>
+                    <p id="principalRemark">Principal's Remark: A Good result keep it up.</p>
+                    <p id="directorName">Director's Name: Mrs Aderonke</p>
+                </div>
+
+                <div class="principal-signature m-2 border border-3  d-md-flex align-items-center d-none ">
+                    <img src="./logo.png" alt="Principal Signature image" srcset="">
+                </div>
+            </div>
+
+
+             
         </div>
 
 
