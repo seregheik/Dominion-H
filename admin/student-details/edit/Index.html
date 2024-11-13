@@ -357,16 +357,84 @@
                                 <li class="list-group-item">
                                     <div class="row">
                                         <div class="text-blue fs-7 col-4 col-md-4">
-                                            <label for="StudentsPassword" class="px-2">Students Password:</label>
+                                            <label for="Password" class="px-2">Password:</label>
                                         </div>
                                         <div class="col-8 fs-7 col-md-4">
-                                            <span id="StudentsPassword" class="text-capitalize text-blue"><input
-                                                    type="password" id="Password" placeholder="Enter Password"
+                                            <span id="Password" class="text-capitalize text-blue"><input type="password"
+                                                    id="Password" placeholder="Enter Password"
                                                     class="form-control form-control-sm" required /></span>
                                         </div>
                                     </div>
                                 </li>
                             </ul>
+                            <div>ADDITIONAL FORM FOR TEACHERS</div>
+                            <ul class="list-group list-group-flush text-start">
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="text-blue fs-7 col-4 col-md-4">
+                                            <label for="Parentsphone" class="px-2">Class Teacher:</label>
+                                        </div>
+                                        <div class="col-8 fs-7 col-md-4">
+                                            <!-- only classes without class teachers should show here -->
+                                            <select class="form-select form-select-sm"
+                                                aria-label="Small select example">
+                                                <option selected value="0">Not a class teacher</option>
+                                                <option value="1">Jss1 A</option>
+                                                <option value="2">Jss1 B</option>
+                                                <option value="3">Jss2 A</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                            <div class="container px-3">
+                                <div class="my-1 col-12 row col-md-4 d-flex justify-content-between">
+                                    <!-- Classes Checkboxes -->
+                                    <div class="my-1 col-12 text-start">
+                                        <label class="form-label">Select Classes:</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="class_ids[]" value="1"
+                                                id="class-1">
+                                            <label class="form-check-label" for="class-1">SS 1</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="class_ids[]" value="2"
+                                                id="class-2">
+                                            <label class="form-check-label" for="class-2">ss2</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="class_ids[]" value="3"
+                                                id="class-3">
+                                            <label class="form-check-label" for="class-3">JSS 3</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Subjects Checkboxes -->
+                                    <div class="my-1 col-12 text-start">
+                                        <label class="form-label">Select Subjects:</label>
+                                        <div class="subject-group" data-class-id="1" style="display: block;">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="subject_ids[]"
+                                                    value="1" id="subject-1">
+                                                <label class="form-check-label" for="subject-1">Physics</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="subject_ids[]"
+                                                    value="2" id="subject-2">
+                                                <label class="form-check-label" for="subject-2">Mathematics</label>
+                                            </div>
+                                        </div>
+                                        <div class="subject-group" data-class-id="3" style="display: none;">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="subject_ids[]"
+                                                    value="3" id="subject-3">
+                                                <label class="form-check-label" for="subject-3">English</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <a href="#" class="btn my-4 btn-secondary text-capitalize">Update</a>
                         </div>
                     </form>
