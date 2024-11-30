@@ -28,6 +28,10 @@
         .loader {
             border-top: 16px solid #650018;
         }
+
+        .pointer {
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -279,267 +283,60 @@
             <section class="main p-0 col-12  text-red col-md-9  text-center">
                 <div class="main-body overflow-auto vh-100">
                     <div class="d-flex justify-content-md-center py-2 sticky-top greyish">
-                        <div class="d-md-none px-3" data-bs-toggle="offcanvas" href="#mobileMenu" role="button"
-                            aria-controls="mobileMenu">
+                        <div class="d-md-none px-3" data-bs-toggle="offcanvas" href="#mobileMenu" role="button">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                 class="bi bi-list" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
                                     d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                             </svg>
                         </div>
-                        <div class="fs-6 fw-bold text-red align-self-center ">Mark Middlename Otto</div>
+                        <div class="fs-6 fw-bold text-red align-self-center ">Mark Middlename Otto Results</div>
                     </div>
                     <div class="d-grid gap-4">
                         <ul class="list-group list-group-flush text-start">
                             <li class="list-group-item">
                                 <div class="row">
-                                    <div class="text-blue text-blue fs-7 col-4 col-md-4"><span class="px-2">Name:</span>
+                                    <div class="text-blue text-blue fs-7 col-4 col-md-4"><span class="px-2">JSS1</span>
                                     </div>
-                                    <div class="col-8 fs-7 col-md-8">
-                                        <span class="text-capitalize text-blue" id="FullName">Mark Otto</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="text-blue fs-7 col-4 col-md-4">
-                                        <span class="px-2">Gender:</span>
-                                    </div>
-                                    <div class="col-8 fs-7 col-md-8">
-                                        <span id="Gender" class="text-lowercase text-blue">Male</span>
+                                    <div class="col-8 d-block fs-7 col-md-8">
+                                        <div class="pb-2"><a class="pointer text-capitalize text-blue">First Term</a>
+                                        </div>
+                                        <div class="py-2"><a class="pointer text-capitalize text-blue">First Second</a>
+                                        </div>
+                                        <div class="py-2"><a class="pointer text-capitalize text-blue">First Third</a>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
                             <li class="list-group-item">
                                 <div class="row">
-                                    <div class="text-blue fs-7 col-4 col-md-4">
-                                        <span class="px-2">Date of Birth:</span>
+                                    <div class="text-blue text-blue fs-7 col-4 col-md-4"><span class="px-2">JSS2</span>
                                     </div>
-                                    <div class="col-8 fs-7 col-md-8">
-                                        <span id="DateOfBirth" class="text-capitalize text-blue">15/08/2009</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="text-blue fs-7 col-4 col-md-4">
-                                        <span class="px-2">Place Of Birth:</span>
-                                    </div>
-                                    <div class="col-8 fs-7 col-md-8">
-                                        <span id="PlaceOfBirth" class="text-capitalize text-blue">1 Amegor street off
-                                            nova
-                                            road, Ugbowo
-                                            benin
-                                            city</span>
+                                    <div class="col-8 d-block fs-7 col-md-8">
+                                        <div class="py-1"><a class="pointer text-capitalize text-blue">First Term</a>
+                                        </div>
+                                        <div class="py-1"><a class="pointer text-capitalize text-blue">First Second</a>
+                                        </div>
+                                        <div class="py-1"><a class="pointer text-capitalize text-blue">First Third</a>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
                             <li class="list-group-item">
                                 <div class="row">
-                                    <div class="text-blue fs-7 col-4 col-md-4">
-                                        <span class="px-2">Genotype:</span>
+                                    <div class="text-blue text-blue fs-7 col-4 col-md-4"><span class="px-2">JSS3</span>
                                     </div>
-                                    <div class="col-8 fs-7 col-md-8">
-                                        <span id="Genotype" class="text-capitalize text-blue">AA</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="text-blue fs-7 col-4 col-md-4">
-                                        <span class="px-2">Blood Group:</span>
-                                    </div>
-                                    <div class="col-8 fs-7 col-md-8">
-                                        <span id="bloodgroup" class="text-capitalize text-blue">O</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="text-blue fs-7 col-4 col-md-4">
-                                        <span class="px-2">Residential Address:</span>
-                                    </div>
-                                    <div class="col-8 fs-7 col-md-8">
-                                        <span id="ResidentialAddress" class="text-capitalize text-blue">1 Amegor street
-                                            off
-                                            nova
-                                            road, Ugbowo
-                                            benin
-                                            city</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="text-blue fs-7 col-4 col-md-4">
-                                        <span class="px-2">LGA Origin:</span>
-                                    </div>
-                                    <div class="col-8 fs-7 col-md-8">
-                                        <span id="LGAOrigin" class="text-capitalize text-blue">Ovia North East</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="text-blue fs-7 col-4 col-md-4">
-                                        <span class="px-2">Religion:</span>
-                                    </div>
-                                    <div class="col-8 fs-7 col-md-8">
-                                        <span id="Religion" class="text-capitalize text-blue">Christianity</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="text-blue fs-7 col-4 col-md-4">
-                                        <span class="px-2">Nationality:</span>
-                                    </div>
-                                    <div class="col-8 fs-7 col-md-8">
-                                        <span id="bloodgroup" class="text-capitalize text-blue">Nigeria</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="text-blue fs-7 col-4 col-md-4">
-                                        <span class="px-2">Previous School:</span>
-                                    </div>
-                                    <div class="col-8 fs-7 col-md-8">
-                                        <span id="previousSchool" class="text-capitalize text-blue">Ugbowo</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="text-blue fs-7 col-4 col-md-4">
-                                        <span class="px-2">Abnormalities:</span>
-                                    </div>
-                                    <div class="col-8 fs-7 col-md-8">
-                                        <span id="Abnormalities" class="text-capitalize text-blue">no</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="text-blue fs-7 col-4 col-md-4">
-                                        <span class="px-2">Health Comment:</span>
-                                    </div>
-                                    <div class="col-8 fs-7 col-md-8">
-                                        <span id="HealthComment" class="text-capitalize text-blue">Lorem ipsum, dolor
-                                            sit amet consectetur adipisicing elit. Odio, consectetur.</span>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="text-blue fs-7 col-4 col-md-4">
-                                        <span class="px-2">Health Condition:</span>
-                                    </div>
-                                    <div class="col-8 fs-7 col-md-8">
-                                        <span id="HealthCondition" class="text-capitalize text-blue">Lorem ipsum, dolor
-                                            sit amet consectetur adipisicing elit. Odio, consectetur.</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="text-blue fs-7 col-4 col-md-4">
-                                        <span class="px-2">Parents Phone:</span>
-                                    </div>
-                                    <div class="col-8 fs-7 col-md-8">
-                                        <a href="tel:+2348165179215" class="text-lowercase text-blue"
-                                            id="ParentsPhone">0816
-                                            517 9215</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="text-blue fs-7 col-4 col-md-4">
-                                        <span class="px-2">Parents Address:</span>
-                                    </div>
-                                    <div class="col-8 fs-7 col-md-8">
-                                        <span id="ParentsAddress" class="text-capitalize text-blue">1 Amegor street
-                                            off
-                                            nova
-                                            road, Ugbowo
-                                            benin
-                                            city</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="text-blue fs-7 col-4 col-md-4">
-                                        <span class="px-2">Parents Occupation:</span>
-                                    </div>
-                                    <div class="col-8 fs-7 col-md-8">
-                                        <span id="ParentsOccupation" class="text-capitalize text-blue">Carpentry</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="text-blue fs-7 col-4 col-md-4">
-                                        <span class="px-2">Email:</span>
-                                    </div>
-                                    <div class="col-8 fs-7 col-md-8">
-                                        <a href="mailto:edenosas1@gmail.com" class="text-lowercase text-blue "
-                                            id="Email"><span>edenosas1@gmail.com</span></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="text-blue fs-7 col-4 col-md-4">
-                                        <span class="px-2">Fathers Phone:</span>
-                                    </div>
-                                    <div class="col-8 fs-7 col-md-8">
-                                        <a href="tel:+2348165179215" class="text-lowercase text-blue"
-                                            id="FathersPhone">0816
-                                            517 9215</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="text-blue fs-7 col-4 col-md-4">
-                                        <span class="px-2">Mothers Phone:</span>
-                                    </div>
-                                    <div class="col-8 fs-7 col-md-8">
-                                        <a href="tel:+2348165179215" class="text-lowercase text-blue"
-                                            id="MothersPhone">0816
-                                            517 9215</a>
-                                    </div>
-                                </div>
-                            </li>
-
-
-                            <!-- this is the html that has the button  -->
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="text-blue fs-7 col-4 col-md-4">
-                                        <span class="px-2">View Students Results</span>
-                                    </div>
-                                    <div class="col-8 fs-7 col-md-8">
-                                        <a href="./result_list.html"
-                                            class="text-lowercase btn btn-secondary btn-sm">results</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="text-blue fs-7 col-4 col-md-4">
-                                        <span class="px-2">Students Password:</span>
-                                    </div>
-                                    <div class="col-8 fs-7 col-md-8">
-                                        <span id="StudentsPassword" class="text-capitalize text-blue">Tamara4434</span>
+                                    <div class="col-8 d-block fs-7 col-md-8">
+                                        <div class="py-1"><a class="pointer text-capitalize text-blue">First Term</a>
+                                        </div>
+                                        <div class="py-1"><a class="pointer text-capitalize text-blue">First Second</a>
+                                        </div>
+                                        <div class="py-1"><a class="pointer text-capitalize text-blue">First Third</a>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
                         </ul>
-                        <a href="./edit/" class="btn my-4 btn-secondary text-capitalize">Edit/Update Student</a>
                     </div>
                 </div>
             </section>
