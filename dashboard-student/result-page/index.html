@@ -49,24 +49,24 @@
             text-transform: capitalize;
             font-size: .6rem;
             background-color: black;
-            
+
         }
 
-        .lh-2{
+        .lh-2 {
             line-height: 6px;
         }
 
-        .fs-10{
+        .fs-10 {
             font-size: .6rem;
         }
 
-        .fs-9{
+        .fs-9 {
             font-size: .7rem;
         }
     </style>
 </head>
 
-<body class=" overflow-x-hidden fs-8">
+<body class=" overflow-x-hidden fs-8 fw-bold" style="max-width: 1024px; margin: 0 auto;">
     <!-- Button for the printing the result -->
     <button class="col-12 d-md-block d-none bg-school py-2 text-white text-uppercase border-0 rounded-2"
         onclick="printPage()">print result</button>
@@ -129,15 +129,15 @@
 
         <!-- The table result -->
         <div class="result-table m-md-1 m-sm-1 table-responsive-md lh-1">
-            <table class="table table-sm table-bordered text-center">
+            <table class="table table-striped table-hover table-sm p-1 table-bordered text-center">
                 <thead class="text-capitalize">
-                    <tr class="fs-10">
+                    <tr class="fs-9">
                         <th class="col text-start">Subjects</th>
-                        <th class="col">Test 1</th>
-                        <th class="col">Test 2</th>
-                        <th class="col">exam</th>
-                        <th class="col">total</th>
-                        <th class="col">grade</th>
+                        <th class="col-1">Test 1</th>
+                        <th class="col-1">Test 2</th>
+                        <th class="col-1">exam</th>
+                        <th class="col-1">total</th>
+                        <th class="col-1">grade</th>
                         <th class="col">remarks</th>
                     </tr>
                 </thead>
@@ -329,7 +329,7 @@
         </div>
 
         <!-- The table sum -->
-        <div class="result-sum d-flex justify-content-evenly align-items-center m-md-0 mx-1 p-0">
+        <div class="result-sum d-flex justify-content-evenly align-items-center m-md-0 mx-1 p-1">
             <p id="termTotal" class="text-white text-uppercase  m-0 fs-10 ">Term's Total : 320</p>
             <p id="termAverage" class="text-white text-uppercase m-0  fs-10 "> Term's average: 85%</p>
 
@@ -363,7 +363,8 @@
                         id="neatnessRating">5</span></p>
                 <p id="politeness" class="d-flex justify-content-between lh-2 fs-9">3. Politeness <span
                         id="politenessRating">5</span></p>
-                <p id="honesty" class="d-flex justify-content-between lh-2 fs-9">4. Honesty <span id="honestyRating">5</span>
+                <p id="honesty" class="d-flex justify-content-between lh-2 fs-9">4. Honesty <span
+                        id="honestyRating">5</span>
                 </p>
                 <p id="teamSpirit" class="d-flex justify-content-between lh-2 fs-9">5. Team Spirit <span
                         id="teamSpiritRating">5</span></p>
@@ -373,7 +374,8 @@
                         id="helpingOthersRating">5</span></p>
                 <p id="emotionalStability" class="d-flex justify-content-between lh-2 fs-9">8. Emotional Stability <span
                         id="emotionalStabilityRating">5</span></p>
-                <p id="health" class="d-flex justify-content-between lh-2 fs-9">9. Health <span id="healthRating">5</span>
+                <p id="health" class="d-flex justify-content-between lh-2 fs-9">9. Health <span
+                        id="healthRating">5</span>
                 </p>
             </div>
 
@@ -384,7 +386,8 @@
                         id="handwritingRating">5</span></p>
                 <p id="verbalFluency" class="d-flex justify-content-between lh-2 fs-9">2. Verbal Fluency <span
                         id="verbalFluencyRating">5</span></p>
-                <p id="sport" class="d-flex justify-content-between lh-2 fs-9">3. Sport <span id="sportRating">5</span></p>
+                <p id="sport" class="d-flex justify-content-between lh-2 fs-9">3. Sport <span id="sportRating">5</span>
+                </p>
                 <p id="handlingTools" class="d-flex justify-content-between lh-2 fs-9">4. Handling Tools <span
                         id="handlingToolsRating">5</span></p>
             </div>
