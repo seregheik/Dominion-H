@@ -32,6 +32,37 @@
         .pointer {
             cursor: pointer;
         }
+        .comment-wrapper{
+            width: 100%;
+            background-color: #33333327;
+        }
+        form {
+            max-width: 500px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        .comment-input{
+            border: 0;
+            border-radius: 6px;
+            color: #fff;
+            background-color: #650018;
+            padding: .4em .6em;
+            font-size: 16px;
+            cursor: pointer;
+            
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+        }
     </style>
 </head>
 
@@ -337,6 +368,13 @@
                                 </div>
                             </li>
                         </ul>
+                    </div>
+                    <div class="comment-wrapper mt-4">
+                        <form action="/" method="POST">
+                            <label for="comment">Principal's Comment:</label>
+                            <textarea id="principal-comment" name="principal-comment" placeholder="Write your comment here..."></textarea>
+                            <input class="mb-2 comment-input" type="submit" value="Submit">
+                        </form>
                     </div>
                 </div>
             </section>
