@@ -92,10 +92,12 @@ body {
   margin-top: 0.5rem;
 }
 .blur-10 {
+  -webkit-backdrop-filter: (0.1rem);
   backdrop-filter: blur(0.1rem);
 }
 
 .blur-20 {
+  -webkit-backdrop-filter: (0.2rem);
   backdrop-filter: blur(0.2rem);
 }
 .vh-75 {
